@@ -8,19 +8,31 @@
 </head>
 <body>
     <h1>Multiplication Table</h1>
-    <form id="mult">
-        <label for="row_begin">Row start:</label><br>
-        <input type="text" id="row_begin" name="row_begin"><br>
-
-        <label for="row_end">Row finish:</label><br>
-        <input type="text" id="row_end" name="row_end"><br>
-
-        <label for="col_begin">Column start:</label><br>
-        <input type="text" id="col_begin" name="col_begin"><br>
-
-        <label for="col_end">Column finish:</label><br>
-        <input type="text" id="col_end" name="col_end"><br>
-    </form>
+    <fieldset>
+        <legend>All numbers must be between -50 and 50 inclusive.</legend>
+        <form id="mult">
+            <label for="row_begin">
+                Starting Row Number
+            </label><br>
+            <input type="text" id="row_begin" name="row_begin"><br>
+    
+            <label for="row_end">
+                Ending Row Number
+            </label><br>
+            <input type="text" id="row_end" name="row_end"><br>
+    
+            <label for="col_begin">
+                Starting Column Number
+            </label><br>
+            <input type="text" id="col_begin" name="col_begin"><br>
+    
+            <label for="col_end">
+                Starting Column Number
+            </label><br>
+            <input type="text" id="col_end" name="col_end"><br>
+        </form>
+    </fieldset>
+    
  
     <input type="submit" value="Create Table" onclick="createTable()"><br>
 

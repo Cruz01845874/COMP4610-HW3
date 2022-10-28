@@ -1,7 +1,7 @@
 var row_begin, row_end, col_begin, col_end;
 
 function createTable(row_begin, row_end, col_begin, col_end) {
-    var output = "<table>";
+    var output = "<table><span style=\"color: #4e23c4\"><th>&#215;</th></span>";
     var message = "Please enter a number between -50 and 50."
     var i, j;
 
@@ -16,9 +16,14 @@ function createTable(row_begin, row_end, col_begin, col_end) {
     }
 
     for (i = row_begin; i <= row_end; i++) {
-        output += "<tr>";
+        output += "<th>" + i + "</th>";
+    }
 
-        for (j = col_begin; j <= col_end; j++) {
+    for (i = col_begin; i <= col_end; i++) {
+        output += "<tr>";
+        output += "<th>" + i + "</th>";
+
+        for (j = row_begin; j <= row_end; j++) {
 
             output = output + "<td>" + (i * j) + "</td>";
         }
