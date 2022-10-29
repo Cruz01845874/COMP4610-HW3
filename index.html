@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <h1>Multiplication Table</h1>
+    <h1>Interactive Multiplication Table</h1>
     <fieldset>
         <legend>All numbers must be between -50 and 50 inclusive.</legend>
         <form id="mult">
@@ -27,19 +27,25 @@
             <input type="text" id="col_begin" name="col_begin"><br>
     
             <label for="col_end">
-                Starting Column Number
+                Ending Column Number
             </label><br>
             <input type="text" id="col_end" name="col_end"><br>
         </form>
+
+        <input type="submit" value="Create Table" onclick="createTable()"><br>
+
+        <div id="error">
+            <!--Error message appears and deletes when fixed-->
+        </div>
+
     </fieldset>
 
+    <br>
     <div id="multTab">
         <!--Creates table when button clicked-->
     </div>
- 
-    <input type="submit" value="Create Table" onclick="createTable()"><br>
 
-    <p id="error"></p>
+    
 
     <script type="text/javascript" src="script/script.js"></script>
     
