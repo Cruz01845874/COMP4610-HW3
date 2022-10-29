@@ -50,6 +50,10 @@ input[type=text]:focus {
     background-color: #008bc2;
 }
 
+input[type=text]::placeholder {
+    color:rgb(141, 140, 140);
+}
+
 input[type=submit] {
     background-color: #008bc2;
     

@@ -1,7 +1,7 @@
 var row_begin, row_end, col_begin, col_end;
 
 function createTable(row_begin, row_end, col_begin, col_end) {
-    var output = "<table><span style=\"color: #4e23c4\"><th>&#215;</th></span>";
+    var output = "<table><th>&#215;</th>";
     var i, j;
 
     row_begin = Number(document.getElementById('row_begin').value);
@@ -28,16 +28,12 @@ function createTable(row_begin, row_end, col_begin, col_end) {
                 else {
                     output = output + "<td>" + (i * j) + "</td>";
                 }
-                
             }
-    
             output += "</tr>";
         }
-    
         output += "</table>";
         document.getElementById('multTab').innerHTML = output;
     }
-    
 }
 
 function checkArgs(r1, r2, c1, c2) {
