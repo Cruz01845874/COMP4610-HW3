@@ -46,7 +46,7 @@ function checkArgs(r1, r2, c1, c2) {
     var i;
 
     for (i = 0; i < values.length; i++) {
-        if (values[i] == NaN) {
+        if (isNaN(values[i])) {
             message += "Please only enter numbers."
             document.getElementById("error").innerHTML = message + "</p>";
             return false;
