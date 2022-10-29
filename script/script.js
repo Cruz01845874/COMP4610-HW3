@@ -22,7 +22,7 @@ function createTable(row_begin, row_end, col_begin, col_end) {
             for (j = row_begin; j <= row_end; j++) {
                 
                 if (i == j) {
-                    output = output + "<td style=\"background-color: #6400c2;\"><span>" + (i * j) + "</span></td>";
+                    output = output + "<td style=\"background-color: #0036ac;\"><span>" + (i * j) + "</span></td>";
                 }
 
                 else {
