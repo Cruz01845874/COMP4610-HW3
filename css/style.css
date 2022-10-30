@@ -89,10 +89,10 @@ input[type=submit]:hover {
     border: 1px solid;
     padding: 10px;
     text-align: center;
-    background-color: #0b23ff0e;
+    background-color: #0000001e;
 }
 
 #multTab th {
-    background-color: #008bc2;
+    background-color: #008bc2d7;
 }
 
