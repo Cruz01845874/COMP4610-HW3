@@ -7,7 +7,7 @@
 var row_begin, row_end, col_begin, col_end;
 
 function createTable(row_begin, row_end, col_begin, col_end) {
-    var output = "<table><th>&#215;</th>";
+    var output = "<table><th class=\"x\">&#215;</th>";
     var i, j;
 
     // casts to number type (string error checking in checkArgs())
