@@ -48,10 +48,11 @@ function createTable(row_begin, row_end, col_begin, col_end) {
     }
 }
 
-// Error checking function checks three cases:
+// Error checking function checks four cases:
 // 1. If the values are strings with isFinite()
-// 2. If the numbers exceed the allowed values ([-50, 50])
-// 3. If the starting values for the rows or columns are greater than its end values
+// 2. If the values are integers
+// 3. If the numbers exceed the allowed values ([-50, 50])
+// 4. If the starting values for the rows or columns are greater than its end values
 // On returning true, the table is created.
 function checkArgs(r1, r2, c1, c2) {
     var message = "<p>";
@@ -62,6 +63,13 @@ function checkArgs(r1, r2, c1, c2) {
     for (i = 0; i < values.length; i++) {
         if (!isFinite(values[i])) {
             message += "Please only enter numbers."
+            document.getElementById("error").innerHTML = message + "</p>";
+            return false;
+        } 
+
+        // integer checker: returns false if not an integer
+        else if (!Number.isInteger(values[i])) {
+            message += "Please only enter integer numbers.";
             document.getElementById("error").innerHTML = message + "</p>";
             return false;
         }
